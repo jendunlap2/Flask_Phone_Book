@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Register Phone Number {% endblock %}
+
+{% block content %}
+    <h1>Register Phone Number</h1>
+    <form = action="" method='post'>
+        {{ form.csrf_token }}
+        <div class="form-group">
+            <fieldset>
+                {{ form.name.label }}
+                {{ form.name(class='form-control', placeholder='Name') }}
+            </fieldset>
+            <fieldset>
+                {{ form.phone_num.label }}
+                {{ form.phone_num(class='form-control', placeholder='Phone Number') }}
+            </fieldset>
+            <fieldset>
+                {{ form.address.label }}
+                {{ form.address(class='form-control', placeholder='Address') }}
+            </fieldset>
+            
+        </div>
+        {{ form.submit(class='btn btn-outline-success') }}
+
+    </form>
+{% endblock %}
